@@ -1,10 +1,10 @@
 body {
     margin: 0;
-    background-color: black;
+    background-color: #111;
+    color: white;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .page {
@@ -81,4 +81,97 @@ body {
 .ferrari-link:focus,
 .ferrari-link:active {
     outline: none;
+}
+
+.exercise-area {
+    width: min(900px, calc(100% - 32px));
+    margin: 32px auto;
+}
+
+.welcome-section,
+.controls-section {
+    padding: 24px;
+    border: 1px solid #444;
+    background-color: #202020;
+}
+
+.controls-section {
+    margin-top: 16px;
+}
+
+.section-heading,
+.filter-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.section-heading {
+    justify-content: space-between;
+}
+
+button {
+    padding: 10px 14px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    background-color: white;
+    color: #111;
+    cursor: pointer;
+}
+
+button:hover,
+button.active {
+    background-color: #e5b700;
+}
+
+#welcomeMessage {
+    min-height: 24px;
+    margin-bottom: 0;
+}
+
+.welcome-section p.visible {
+    color: #e5b700;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.project {
+    padding: 16px;
+    border: 1px solid #666;
+    background-color: #2d2d2d;
+}
+
+.project[hidden] {
+    display: none;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+}
+
+body:not(.dark-theme) {
+    background-color: #f1eee6;
+    color: #222;
+}
+
+body:not(.dark-theme) .welcome-section,
+body:not(.dark-theme) .controls-section {
+    background-color: white;
+    border-color: #c7c1b5;
+}
+
+body:not(.dark-theme) .project {
+    background-color: #f8f6f0;
+    border-color: #c7c1b5;
+}
+
+body:not(.dark-theme) .ferrari-link {
+    color: white;
 }

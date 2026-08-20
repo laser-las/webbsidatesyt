@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Min portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="repetition.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="page">
@@ -20,5 +22,41 @@
         <img src="image1.png" alt="" class="img-3">
         <img src="image4.png" alt="" class="img-4">
     </div>
+    <main class="exercise-area">
+        <section class="welcome-section" aria-labelledby="welcomeHeading">
+            <h1 id="welcomeHeading">Min portfolio</h1>
+            <button id="welcomeButton" type="button">Visa välkomstmeddelande</button>
+            <p id="welcomeMessage" role="status"></p>
+        </section>
+
+        <section class="controls-section" aria-labelledby="controlsHeading">
+            <div class="section-heading">
+                <h2 id="controlsHeading">Interaktiv portfolio</h2>
+                <button id="themeButton" type="button">Mörkt tema</button>
+            </div>
+            <div class="filter-controls" aria-label="Filtrera projekt">
+                <button class="filter-button active" type="button" data-filter="all">Alla</button>
+                <button class="filter-button" type="button" data-filter="html">HTML</button>
+                <button class="filter-button" type="button" data-filter="javascript">JavaScript</button>
+                <button class="filter-button" type="button" data-filter="python">Python</button>
+            </div>
+            <div class="projects" id="projectList">
+                <article class="project" data-category="html">
+                    <h3>Webbsida</h3>
+                    <p>En responsiv sida byggd med HTML och CSS.</p>
+                </article>
+                <article class="project" data-category="javascript">
+                    <h3>Portfolio</h3>
+                    <p>Interaktivitet och DOM-manipulation med JavaScript.</p>
+                </article>
+                <article class="project" data-category="python">
+                    <h3>Dashboard</h3>
+                    <p>En dashboard som visar data från ett Python-projekt.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>© <span id="currentYear"></span> Min portfolio</footer>
 </body>
 </html>
