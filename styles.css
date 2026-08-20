@@ -156,6 +156,34 @@ footer {
     text-align: center;
 }
 
+.contact-form {
+    display: grid;
+    gap: 8px;
+    width: min(520px, 100%);
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font: inherit;
+}
+
+.contact-form button {
+    justify-self: start;
+    margin-top: 4px;
+}
+
+#contactStatus {
+    min-height: 24px;
+    color: #e5b700;
+}
+
 body:not(.dark-theme) {
     background-color: #f1eee6;
     color: #222;

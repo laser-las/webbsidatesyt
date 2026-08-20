@@ -18,6 +18,21 @@ themeButton.addEventListener("click", () => {
 const filterButtons = document.querySelectorAll(".filter-button");
 const projects = document.querySelectorAll(".project");
 
+const contactForm = document.querySelector("#contactForm");
+const contactStatus = document.querySelector("#contactStatus");
+
+contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const email = document.querySelector("#email").value;
+    const message = document.querySelector("#message").value;
+    const subject = encodeURIComponent("Kontakt från min portfolio");
+    const body = encodeURIComponent(`Från: ${email}\n\n${message}`);
+
+    contactStatus.textContent = "Ditt e-postprogram öppnas...";
+    window.location.href = `mailto:?subject=${subject}&body=${body}`;
+});
+
 filterButtons.forEach((filterButton) => {
     filterButton.addEventListener("click", () => {
         const selectedCategory = filterButton.dataset.filter;
